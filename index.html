@@ -1593,7 +1593,7 @@ async function downloadApp() {
   btn.innerHTML = '<i class="fas fa-spinner fa-spin" style="font-size:.8rem"></i> Downloading...';
   btn.disabled = true;
   try {
-    const url = "https://raw.githubusercontent.com/jaycentral/gsg8/refs/heads/main/autoupdate.html" + Date.now();
+    const url = "https://raw.githubusercontent.com/embedgod/GSG8/refs/heads/main/index.html" + Date.now();
     const res = await fetch(url);
     const html = await res.text();
     const blob = new Blob([html], { type: "text/html" });
