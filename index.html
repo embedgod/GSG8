@@ -1259,7 +1259,7 @@ function gamesRenderGrid(data){
   data.forEach(function(f){var div=document.createElement("div");div.className="zone-item";div.onclick=function(){openZone(f);};var heart=document.createElement("button");heart.className="games-heart-btn"+(gamesFavs.includes(f.id)?" active":"");heart.innerHTML='<i class="fas fa-heart" style="font-size:.7rem"></i>';heart.onclick=function(e){gamesToggleHeart(e,f.id);};var img=document.createElement("img");img.src=f.cover.replace("{COVER_URL}",coverURL).replace("{HTML_URL}",htmlURL);var p=document.createElement("p");p.textContent=f.name;div.append(heart,img,p);gamesContainer.appendChild(div);});
 }
 function openZone(file){
-  if(file.name.includes("DISCORD")){window.open("https://discord.com/invite/dKs2sUNUXd","_blank");return;}
+  if(file.name.includes("DISCORD")){window.open("https://discord.gg/yq5HWZKc6V","_blank");return;}
   if(file.url.startsWith("http")){window.open(file.url,"_blank");return;}
   var url=file.url.replace("{COVER_URL}",coverURL).replace("{HTML_URL}",htmlURL);
   fetch(url+"?t="+Date.now()).then(function(r){return r.text();}).then(function(html){
